@@ -1,18 +1,29 @@
-[package]
-name = "gqlf"
-version = "0.1.0"
-edition = "2021"
-authors = ["The gqlf project developers"]
-license = "MIT OR Apache-2.0"
-readme = "README.md"
-repository = "https://github.com/gqlf/gqlf"
-documentation = ""
-homepage = ""
+[workspace]
+resolver = "2"
+members = [
+    "crates/*"
+]
+
+[workspace.package]
+authors = [
+    "Mohammed R.W Neundorf <naxmefy@gmail.com>"
+]
 description = """
 CLI and server application to manage several custom graphql federation endpoints.
 """
+documentation = "https://gqlf.nax.me"
+edition = "2021"
+homepage = "https://gqlf.nax.me"
 keywords = ["graphql", "federation", "gateway"]
-categories = []
-include = ["src/", "LICENSE-*", "README.md", "COPYRIGHT"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/gqlf/gqlf"
+rust-version = "1.70"
+version = "0.1.0"
 
-[dependencies]
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
