@@ -29,20 +29,20 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 ## Code of Conduct 
 
 This project and everyone participating in it is governed by the 
-[gqlf Code of Conduct](https://github.com/gqlf/gqlfblob/master/CODE_OF_CONDUCT.md). 
+[gqlf Code of Conduct](https://github.com/naxmefy/gqlf/blob/main/.github/CODE_OF_CONDUCT.md). 
 By participating, you are expected to uphold this code. Please report unacceptable behavior 
 to . 
 
 
 ## I Have a Question 
 
-> If you want to ask a question, we assume that you have read the available [Documentation](https://gqlf.github.io). 
+> If you want to ask a question, we assume that you have read the available [Documentation](https://gqlf.nax.me). 
 
-Before you ask a question, it is best to search for existing [Issues](https://github.com/gqlf/gqlfissues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first. 
+Before you ask a question, it is best to search for existing [Issues](https://github.com/naxmefy/gqlf/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first. 
 
 If you then still feel the need to ask a question and need clarification, we recommend the following: 
 
-- Open an [Issue](https://github.com/gqlf/gqlfissues/new). 
+- Open an [Issue](https://github.com/naxmefy/gqlf/issues/new). 
 - Provide as much context as you can about what you're running into. 
 - Provide project and platform versions (nodejs, npm, etc), depending on what seems relevant. 
 
@@ -76,8 +76,8 @@ Depending on how large the project is, you may want to outsource the questioning
 A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible. 
 
 - Make sure that you are using the latest version. 
-- Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (Make sure that you have read the [documentation](https://gqlf.github.io). If you are looking for support, you might want to check [this section](#i-have-a-question)). 
-- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/gqlf/gqlfissues?q=label%3Abug). 
+- Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (Make sure that you have read the [documentation](https://gqlf.nax.me). If you are looking for support, you might want to check [this section](#i-have-a-question)). 
+- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/naxmefy/gqlf/issues?q=label%3Abug). 
 - Also make sure to search the internet (including Stack Overflow) to see if users outside of the GitHub community have discussed the issue. 
 - Collect information about the bug: 
 - Stack trace (Traceback) 
@@ -94,7 +94,7 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project: 
 
-- Open an [Issue](https://github.com/gqlf/gqlfissues/new). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.) 
+- Open an [Issue](https://github.com/naxmefy/gqlf/issues/new). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.) 
 - Explain the behavior you would expect and the actual behavior. 
 - Please provide as much context as possible and describe the *reproduction steps* that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case. 
 - Provide the information you collected in the previous section. 
@@ -116,14 +116,14 @@ This section guides you through submitting an enhancement suggestion for gqlf, *
 #### Before Submitting an Enhancement 
 
 - Make sure that you are using the latest version. 
-- Read the [documentation](https://gqlf.github.io) carefully and find out if the functionality is already covered, maybe by an individual configuration. 
-- Perform a [search](https://github.com/gqlf/gqlfissues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one. 
+- Read the [documentation](https://gqlf.nax.me) carefully and find out if the functionality is already covered, maybe by an individual configuration. 
+- Perform a [search](https://github.com/naxmefy/gqlf/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one. 
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset. If you're just targeting a minority of users, consider writing an add-on/plugin library. 
 
 <!-- omit in toc --> 
 #### How Do I Submit a Good Enhancement Suggestion? 
 
-Enhancement suggestions are tracked as [GitHub issues](https://github.com/gqlf/gqlfissues). 
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/naxmefy/gqlf/issues). 
 
 - Use a **clear and descriptive title** for the issue to identify the suggestion. 
 - Provide a **step-by-step description of the suggested enhancement** in as many details as possible. 
@@ -145,11 +145,65 @@ Updating, improving and correcting the documentation
 
 --> 
 
-## Styleguides 
-### Commit Messages 
-<!-- TODO 
+## Styleguides
 
---> 
+### Rust
+
+### Commit Messages
+
+We have very precise rules over how our git commit messages can be formatted. This leads to more readable messages that are easy to follow when looking through the project history. 
+
+#### Commit Message Format
+Each commit message consists of a header, a body and a footer. The header has a special format that includes a type, a scope and a subject:
+
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+The header is mandatory and the scope of the header is optional.
+
+Any line of the commit message cannot be longer 100 characters! This allows the message to be easier to read on GitHub as well as in various git tools.
+
+The footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
+
+> Documentation to conventional commits can be found on [conventionalcommits.org](https://www.conventionalcommits.org/en/v1.0.0/)
+> 
+> Documentation to SemVer can be found on [semver.org](http://semver.org/)
+> 
+> Inspired by [Angular convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
+
+#### Revert
+If the commit reverts a previous commit, it should begin with revert: , followed by an explanation. The footer contains `Refs` keyword followed by the SHA-codes of the commits.
+
+**Example**
+
+```
+revert: let us never again speak of the noodle incident
+
+Refs: 676104e, a215868
+```
+
+#### Types
+
+- `feat`: Features or general changes (this correlates with [MINOR](http://semver.org/#summary) in Semantic Versioning)
+- `fix`: Bugfixes (this correlates with [PATCH](http://semver.org/#summary) in Semantic Versioning)
+- `build`: Changes that affect the build system or external dependencies
+- `ci`: Changes to our CI configuration files and scripts
+- `perf`: A code change that improves performance
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `revert`: To revert one or multiple commits (SHA-codes in footer with key `Refs` required)
+- `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `test`: Adding missing tests or correcting existing tests
+- `docs`: changes on documents, like readme or licenses
+- `chore`: catch-all for any other commits that do not fit into other categories like "feat" for new features or "fix" for bug fixes
+
+#### Scopes
+
+<!-- TODO --> 
 
 ## Join The Project Team 
 <!-- TODO --> 
