@@ -8,6 +8,7 @@ members = [
 authors = [
     "Mohammed R.W Neundorf <naxmefy@gmail.com>"
 ]
+categories = []
 description = """
 CLI and server application to manage several custom graphql federation endpoints.
 """
